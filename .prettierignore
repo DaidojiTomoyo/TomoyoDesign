@@ -1,0 +1,15 @@
+node_modules/
+.pnpm-store/
+.next/
+.turbo/
+out/
+dist/
+coverage/
+pnpm-lock.yaml
+next-env.d.ts
+*.tsbuildinfo
+.agents/
+.codex/
+.impeccable/
+PRODUCT.md
+DESIGN.md

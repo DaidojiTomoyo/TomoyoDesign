@@ -1,0 +1,132 @@
+.effect {
+  width: 100%;
+}
+
+.compact {
+  display: grid;
+  height: 100%;
+  place-items: center;
+}
+
+.compact .stage {
+  width: 116%;
+  height: auto;
+  aspect-ratio: 1328 / 430;
+  cursor: default;
+}
+
+.compact .fallback {
+  visibility: hidden;
+}
+
+.stage {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 430px;
+  place-items: center;
+  outline-offset: 6px;
+  cursor: crosshair;
+  overflow: hidden;
+}
+
+.stage:focus-visible {
+  outline: 2px solid var(--blue, #254bff);
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fallback {
+  font-family: var(--font-inter), sans-serif;
+  color: #254bff;
+  font-size: 270px;
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -16px;
+  user-select: none;
+}
+
+.stage[data-state="ready"] .canvas {
+  opacity: 1;
+}
+
+.stage[data-state="ready"] .fallback {
+  visibility: hidden;
+}
+
+.meta {
+  display: flex;
+  height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  color: #596576;
+  font-size: 15px;
+}
+
+.meta p {
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.meta button {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #263246;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.meta button:hover:not(:disabled) {
+  background: #f3f5f8;
+  color: #15223a;
+}
+
+.meta button:focus-visible {
+  outline: 2px solid #254bff;
+  outline-offset: 4px;
+}
+
+.meta button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.meta svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.accessibleText {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

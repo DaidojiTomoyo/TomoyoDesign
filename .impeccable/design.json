@@ -1,0 +1,367 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-16T08:36:58.619558Z",
+  "title": "Design System: TomoyoDesign",
+  "extensions": {
+    "colorMeta": {
+      "blue": {
+        "role": "primary",
+        "displayName": "Electric cobalt",
+        "tonalRamp": [
+          "oklch(15% 0.0805 266.23)",
+          "oklch(27% 0.1380 266.23)",
+          "oklch(39% 0.1955 266.23)",
+          "oklch(51% 0.2300 266.23)",
+          "oklch(63% 0.2300 266.23)",
+          "oklch(75% 0.1840 266.23)",
+          "oklch(87% 0.1035 266.23)",
+          "oklch(95% 0.0345 266.23)"
+        ]
+      },
+      "blue-deep": {
+        "role": "primary",
+        "displayName": "Deep cobalt",
+        "tonalRamp": [
+          "oklch(15% 0.0805 265.66)",
+          "oklch(27% 0.1380 265.66)",
+          "oklch(39% 0.1955 265.66)",
+          "oklch(51% 0.2300 265.66)",
+          "oklch(63% 0.2300 265.66)",
+          "oklch(75% 0.1840 265.66)",
+          "oklch(87% 0.1035 265.66)",
+          "oklch(95% 0.0345 265.66)"
+        ]
+      },
+      "example-ink": {
+        "role": "secondary",
+        "displayName": "Object ink",
+        "tonalRamp": [
+          "oklch(15% 0.0111 173.17)",
+          "oklch(27% 0.0190 173.17)",
+          "oklch(39% 0.0269 173.17)",
+          "oklch(51% 0.0316 173.17)",
+          "oklch(63% 0.0316 173.17)",
+          "oklch(75% 0.0253 173.17)",
+          "oklch(87% 0.0142 173.17)",
+          "oklch(95% 0.0047 173.17)"
+        ]
+      },
+      "example-muted": {
+        "role": "secondary",
+        "displayName": "Muted object green",
+        "tonalRamp": [
+          "oklch(15% 0.0117 170.59)",
+          "oklch(27% 0.0201 170.59)",
+          "oklch(39% 0.0285 170.59)",
+          "oklch(51% 0.0335 170.59)",
+          "oklch(63% 0.0335 170.59)",
+          "oklch(75% 0.0268 170.59)",
+          "oklch(87% 0.0151 170.59)",
+          "oklch(95% 0.0050 170.59)"
+        ]
+      },
+      "example-action": {
+        "role": "secondary",
+        "displayName": "Object action green",
+        "tonalRamp": [
+          "oklch(15% 0.0119 168.69)",
+          "oklch(27% 0.0205 168.69)",
+          "oklch(39% 0.0290 168.69)",
+          "oklch(51% 0.0341 168.69)",
+          "oklch(63% 0.0341 168.69)",
+          "oklch(75% 0.0273 168.69)",
+          "oklch(87% 0.0153 168.69)",
+          "oklch(95% 0.0051 168.69)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "tonalRamp": [
+          "oklch(15% 0.0000 0.00)",
+          "oklch(27% 0.0000 0.00)",
+          "oklch(39% 0.0000 0.00)",
+          "oklch(51% 0.0000 0.00)",
+          "oklch(63% 0.0000 0.00)",
+          "oklch(75% 0.0000 0.00)",
+          "oklch(87% 0.0000 0.00)",
+          "oklch(95% 0.0000 0.00)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Cold paper",
+        "tonalRamp": [
+          "oklch(15% 0.0014 271.37)",
+          "oklch(27% 0.0025 271.37)",
+          "oklch(39% 0.0035 271.37)",
+          "oklch(51% 0.0041 271.37)",
+          "oklch(63% 0.0041 271.37)",
+          "oklch(75% 0.0033 271.37)",
+          "oklch(87% 0.0019 271.37)",
+          "oklch(95% 0.0006 271.37)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Near-black ink",
+        "tonalRamp": [
+          "oklch(15% 0.0051 272.46)",
+          "oklch(27% 0.0088 272.46)",
+          "oklch(39% 0.0124 272.46)",
+          "oklch(51% 0.0146 272.46)",
+          "oklch(63% 0.0146 272.46)",
+          "oklch(75% 0.0117 272.46)",
+          "oklch(87% 0.0066 272.46)",
+          "oklch(95% 0.0022 272.46)"
+        ]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Muted ink",
+        "tonalRamp": [
+          "oklch(15% 0.0108 257.08)",
+          "oklch(27% 0.0186 257.08)",
+          "oklch(39% 0.0263 257.08)",
+          "oklch(51% 0.0309 257.08)",
+          "oklch(63% 0.0309 257.08)",
+          "oklch(75% 0.0247 257.08)",
+          "oklch(87% 0.0139 257.08)",
+          "oklch(95% 0.0046 257.08)"
+        ]
+      },
+      "navigation-muted": {
+        "role": "neutral",
+        "displayName": "Navigation gray",
+        "tonalRamp": [
+          "oklch(15% 0.0075 261.28)",
+          "oklch(27% 0.0128 261.28)",
+          "oklch(39% 0.0181 261.28)",
+          "oklch(51% 0.0213 261.28)",
+          "oklch(63% 0.0213 261.28)",
+          "oklch(75% 0.0171 261.28)",
+          "oklch(87% 0.0096 261.28)",
+          "oklch(95% 0.0032 261.28)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Fine line",
+        "tonalRamp": [
+          "oklch(15% 0.0051 264.50)",
+          "oklch(27% 0.0088 264.50)",
+          "oklch(39% 0.0124 264.50)",
+          "oklch(51% 0.0146 264.50)",
+          "oklch(63% 0.0146 264.50)",
+          "oklch(75% 0.0117 264.50)",
+          "oklch(87% 0.0066 264.50)",
+          "oklch(95% 0.0022 264.50)"
+        ]
+      },
+      "example-surface": {
+        "role": "neutral",
+        "displayName": "Example gray",
+        "tonalRamp": [
+          "oklch(15% 0.0026 260.73)",
+          "oklch(27% 0.0045 260.73)",
+          "oklch(39% 0.0063 260.73)",
+          "oklch(51% 0.0074 260.73)",
+          "oklch(63% 0.0074 260.73)",
+          "oklch(75% 0.0059 260.73)",
+          "oklch(87% 0.0033 260.73)",
+          "oklch(95% 0.0011 260.73)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Archivo display",
+        "purpose": "Monumental opening statement using the typeface’s real regular weight, scaling with desktop width and viewport height to fit the first screen and shader’s light region."
+      },
+      "wordmark": {
+        "displayName": "Footer wordmark",
+        "purpose": "The complete uniformly near-black footer name, scaling only within the desktop composition."
+      },
+      "headline": {
+        "displayName": "Inter section headline",
+        "purpose": "Example and workflow headings; collection and gallery sizes are local variants."
+      },
+      "title": {
+        "displayName": "Inter item title",
+        "purpose": "Three practical workflow step titles."
+      },
+      "body": {
+        "displayName": "Inter body",
+        "purpose": "Main product interface and reading foundation."
+      },
+      "action": {
+        "displayName": "Inter browse action",
+        "purpose": "Prominent browse buttons."
+      },
+      "label": {
+        "displayName": "Plex effect label",
+        "purpose": "Small monospaced effect identifier, with smaller local variants for step numbers and footer signature."
+      },
+      "example-headline": {
+        "displayName": "Geist example headline",
+        "purpose": "Furniture page headline inside the FORM Objects example only."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "image-pan",
+        "value": "180ms expo.out",
+        "purpose": "GSAP quickTo smoothing for the furniture photograph’s viewing origin."
+      },
+      {
+        "name": "gallery-expand",
+        "value": "650ms expo.out",
+        "purpose": "GSAP quickTo expansion of gallery image flex-grow and height."
+      },
+      {
+        "name": "image-focus",
+        "value": "500ms expo.out",
+        "purpose": "GSAP quickTo zoom of the furniture photograph."
+      }
+    ],
+    "breakpoints": []
+  },
+  "components": [
+    {
+      "name": "Primary browse action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main filled cobalt browse action with a compact arrow and deep cobalt hover.",
+      "html": "<a class=\"ds-primary\" href=\"#components\">Browse components <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"></path><path d=\"M7 17 17 7\"></path></svg></a>",
+      "css": ".ds-primary{display:inline-flex;min-height:52px;align-items:center;justify-content:space-between;gap:24px;padding:16px 22px;border:0;border-radius:4px;font-size:14px;font-weight:600;line-height:20px;text-decoration:none;font-family:var(--font-inter,Inter),sans-serif;background:var(--blue,#254bff);color:var(--white,#ffffff)}.ds-primary svg{width:18px;height:18px;flex-shrink:0;stroke:currentColor;stroke-width:1.6;}.ds-primary:hover{background:var(--blue-deep,#183bdf)}.ds-primary:focus-visible{outline:2px solid var(--blue,#254bff);outline-offset:5px;}"
+    },
+    {
+      "name": "Inverse browse action",
+      "kind": "button",
+      "refersTo": "button-inverse",
+      "description": "White action for the cobalt closing invitation; the specimen includes its contrast context.",
+      "html": "<div class=\"ds-inverse-context\"><a class=\"ds-inverse\" href=\"#components\">Browse components <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"></path><path d=\"M7 17 17 7\"></path></svg></a></div>",
+      "css": ".ds-inverse-context{display:inline-block;padding:20px;background:var(--blue,#254bff)}.ds-inverse{display:inline-flex;min-height:52px;align-items:center;justify-content:space-between;gap:24px;padding:16px 22px;border:0;border-radius:4px;font-size:14px;font-weight:600;line-height:20px;text-decoration:none;font-family:var(--font-inter,Inter),sans-serif;background:var(--white,#ffffff);color:var(--blue,#254bff)}.ds-inverse svg{width:18px;height:18px;flex-shrink:0;stroke:currentColor;stroke-width:1.6;}.ds-inverse:hover{background:#e4eaff}.ds-inverse:focus-visible{outline:2px solid var(--white,#ffffff);outline-offset:5px}"
+    },
+    {
+      "name": "Header browse action",
+      "kind": "button",
+      "refersTo": "button-header",
+      "description": "Compact regular-weight filled action in the transparent desktop header.",
+      "html": "<a class=\"ds-header-action\" href=\"#components\">Browse components</a>",
+      "css": ".ds-header-action{display:inline-flex;min-height:43px;align-items:center;justify-content:center;padding:13px 18px;color:var(--white,#ffffff);border-radius:4px;background:var(--blue,#254bff);font-size:14px;font-weight:400;line-height:17px;text-decoration:none;white-space:nowrap;font-family:var(--font-inter,Inter),sans-serif;}.ds-header-action:hover{background:var(--blue-deep,#183bdf)}.ds-header-action:focus-visible{outline:2px solid var(--blue,#254bff);outline-offset:5px;}"
+    },
+    {
+      "name": "Desktop navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Always-visible desktop links; the first link uses near-black and the remaining links use navigation gray.",
+      "html": "<nav class=\"ds-navigation\" aria-label=\"Main navigation\"><a href=\"#components\">Components</a><a href=\"#examples\">Examples</a><a href=\"#how-to-use\">How to use</a></nav>",
+      "css": ".ds-navigation{display:flex;align-items:center;gap:32px;font-family:var(--font-inter,Inter),sans-serif;}.ds-navigation a{padding-block:12px;color:#555c68;font-size:14px;font-weight:400;line-height:17px;text-decoration:none;}.ds-navigation a:first-child{color:var(--ink,#11131a)}.ds-navigation a:hover{color:var(--blue,#254bff)}.ds-navigation a:focus-visible{outline:2px solid var(--blue,#254bff);outline-offset:5px;}"
+    },
+    {
+      "name": "Reset light",
+      "kind": "button",
+      "refersTo": "button-reset",
+      "description": "Icon-only reset beside metallic playback, with a transparent 44px target. Disabled while paused, reduced motion is enabled, or rendering is unavailable.",
+      "html": "<button class=\"ds-reset\" type=\"button\" aria-label=\"Reset metallic light\" title=\"Reset light\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"></path><path d=\"M3 3v5h5\"></path></svg></button>",
+      "css": ".ds-reset{display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;padding:0;border:0;border-radius:50%;background:transparent;color:#263246;cursor:pointer}.ds-reset:hover:not(:disabled){background:#f3f5f8;color:#15223a}.ds-reset:focus-visible{outline:2px solid #254bff;outline-offset:4px}.ds-reset:disabled{opacity:.4;cursor:default}"
+    },
+    {
+      "name": "Tunnel playback",
+      "kind": "button",
+      "refersTo": "playback",
+      "description": "Filled Pause/Play icon on a transparent 44px hit area, with no visible border or hover surface; keyboard focus draws a circular outline.",
+      "html": "<button class=\"ds-playback\" type=\"button\" aria-label=\"Pause tunnel animation\" aria-pressed=\"false\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"14\" y=\"3\" width=\"5\" height=\"18\" rx=\"1\"></rect><rect x=\"5\" y=\"3\" width=\"5\" height=\"18\" rx=\"1\"></rect></svg></button>",
+      "css": ".ds-playback{display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;padding:0;border:0;border-radius:50%;color:#1d2d61;background:transparent;font-family:var(--font-inter,Inter),sans-serif;cursor:pointer}.ds-playback svg{width:18px;height:18px}.ds-playback:focus-visible{outline:2px solid var(--blue,#254bff);outline-offset:4px}.ds-playback:disabled{cursor:default;opacity:0.45}"
+    },
+    {
+      "name": "FORM categories",
+      "kind": "chip",
+      "refersTo": "example-category",
+      "description": "Unboxed Geist category choices inside the furniture example, with an underlined selected state.",
+      "html": "<div class=\"ds-categories\" role=\"group\" aria-label=\"Select an object category\"><button type=\"button\" aria-pressed=\"true\">Seating</button><button type=\"button\" aria-pressed=\"false\">Objects</button><button type=\"button\" aria-pressed=\"false\">Lighting</button></div>",
+      "css": ".ds-categories{display:flex;gap:18px;font-family:var(--font-geist-sans,Geist),sans-serif;}.ds-categories button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:38px;padding:0;border:0;border-radius:0;background:none;color:#435c53;font:inherit;font-size:13px;font-weight:400;line-height:1.6;cursor:pointer;text-underline-offset:.3em;}.ds-categories button:hover,.ds-categories button[aria-pressed=\"true\"]{color:#243b34;text-decoration:underline}.ds-categories button:focus-visible{outline:2px solid var(--blue,#254bff);outline-offset:5px;}"
+    },
+    {
+      "name": "FORM collection action",
+      "kind": "button",
+      "refersTo": "example-action",
+      "description": "Contextual green collection action with Geist type, hover, and active states.",
+      "html": "<button class=\"ds-example-action\" type=\"button\" aria-label=\"View the next object in the collection\">View collection <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"></path><path d=\"M7 17 17 7\"></path></svg></button>",
+      "css": ".ds-example-action{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;min-height:43px;padding:13px 18px;border:0;border-radius:4px;background:#253d34;color:var(--white,#ffffff);font-size:13px;font-weight:400;line-height:17px;cursor:pointer;font-family:var(--font-geist-sans,Geist),sans-serif;}.ds-example-action:hover{background:#385649}.ds-example-action:active{background:#182d24}.ds-example-action:focus-visible{outline:2px solid var(--blue,#254bff);outline-offset:5px;}"
+    },
+    {
+      "name": "Text action",
+      "kind": "button",
+      "refersTo": "text-link",
+      "description": "Cobalt section link with an arrow and underline on hover.",
+      "html": "<a class=\"ds-text-link\" href=\"#components\">Start with a component <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"></path><path d=\"M7 17 17 7\"></path></svg></a>",
+      "css": ".ds-text-link{display:inline-flex;min-height:28px;align-items:center;gap:12px;color:var(--blue,#254bff);font-size:14px;font-weight:400;line-height:20px;text-decoration:none;text-underline-offset:.2em;font-family:var(--font-inter,Inter),sans-serif;}.ds-text-link svg{width:18px;height:18px;flex-shrink:0;stroke:currentColor;stroke-width:1.6;}.ds-text-link:hover{text-decoration:underline}.ds-text-link:focus-visible{outline:2px solid var(--blue,#254bff);outline-offset:5px;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The interaction edition",
+    "overview": "TomoyoDesign combines monumental Archivo Black typography with reflective cobalt geometry and flowing silver chrome. Inter provides a clear practical interface, while small IBM Plex Mono labels give the work a precise editorial signature. White display surfaces and generous horizontal compositions let each demonstration occupy the foreground.\n\nThe interface remains flat around dimensional shader materials and object photography. The embedded FORM Objects example introduces its own quiet green palette and Geist typography within a cool gray section. This document records the current pen-derived implementation; the homepage's exact composition and acceptance measurements live in its surface brief.",
+    "keyCharacteristics": [
+      "Monumental Archivo Black display type and a uniformly black footer wordmark.",
+      "Inter interface typography with restrained IBM Plex Mono labels.",
+      "Cobalt architectural geometry and silver liquid chrome on white and cold paper surfaces.",
+      "Wide desktop compositions, fine borders, and compact rectangular actions.",
+      "A distinct furniture example with green type and Geist typography.",
+      "GSAP-driven effects with accessible controls, reduced motion, and rendering fallbacks."
+    ],
+    "rules": [
+      {
+        "name": "The Accent Has a Job Rule",
+        "body": "Use cobalt for an action, focus, or the demonstrated material. Keep supporting structure neutral.",
+        "section": "colors"
+      },
+      {
+        "name": "The Example Boundary Rule",
+        "body": "Keep the furniture example's green palette and Geist typography inside its contextual frame.",
+        "section": "colors"
+      },
+      {
+        "name": "The Drawn Weight Rule",
+        "body": "Archivo Black supplies its weight through the typeface itself. Use its real regular weight rather than applying synthetic bold.",
+        "section": "typography"
+      },
+      {
+        "name": "The Shared Edge Rule",
+        "body": "Align headings, demonstrations, captions, and dividers to the same content frame; vary the work inside that frame.",
+        "section": "layout"
+      },
+      {
+        "name": "The Source Material Rule",
+        "body": "Keep the demonstrated materials dimensional: cobalt portals with broad silver reflections, and liquid silver lettering with cobalt environment reflections. The user-approved overdrive refinement evolves the original pen shaders while preserving their role and the surrounding composition.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Quiet Frame Rule",
+        "body": "Keep imagery rectangular and surrounding controls compact so the demonstrated material remains the focal point.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Operable Demonstration Rule",
+        "body": "Keep effect content readable and keyboard-operable, including static states when motion or rendering is unavailable.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do preserve the approved dimensional materials and the distinct roles of all four font families.",
+      "Do keep the footer name uniformly near-black and uniformly Archivo Black.",
+      "Do use shared content edges and generous horizontal room for the demonstrations.",
+      "Do preserve visible focus, selected states, and readable rendering fallbacks.",
+      "Do keep the current homepage's desktop structure in narrow preview windows."
+    ],
+    "donts": [
+      "Don't replace Archivo Black display type or main Inter text with Geist.",
+      "Don't introduce phone or tablet reflows into this desktop-only implementation.",
+      "Don't add rounded, shadowed card containers around every demonstration.",
+      "Don't replace the dimensional tunnel or liquid metal with flat decorative gradients.",
+      "Don't let the furniture example's colors or typography redefine surrounding product chrome."
+    ]
+  }
+}

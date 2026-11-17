@@ -1,0 +1,43 @@
+.root {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 430px;
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: min(100%, 1120px);
+  height: 400px;
+}
+
+.imageButton {
+  position: relative;
+  flex: 1 1 0%;
+  min-width: 0;
+  height: 300px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #0000001a;
+  border-radius: 0;
+  background: #e5e9e8;
+  cursor: pointer;
+}
+
+.imageButton[data-active="true"] {
+  flex-grow: 3.44;
+  height: 390px;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+  user-select: none;
+}
+
+.imageButton:focus-visible {
+  outline: 2px solid var(--blue, #254bff);
+  outline-offset: 5px;
+}
