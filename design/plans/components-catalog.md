@@ -31,7 +31,7 @@
 
 ## 3. 页面结构
 
-1. **共享页头。** 品牌返回首页，Components 为当前栏目；Examples 与 How to use 返回首页对应位置。沿用 GitHub 官方标志与 soon 状态。目录页不再重复同目标的 Browse components 按钮。
+1. **共享页头。** 品牌返回首页，Components 为当前栏目；Examples 与 How to use 返回首页对应位置。GitHub 入口使用官方标志，链接到项目仓库。目录页不再重复同目标的 Browse components 按钮。
 2. **紧凑介绍。** 标题 `Components`，说明 `Explore effects for text, images, and backgrounds.`，让搜索与首排效果尽早进入视线。
 3. **搜索栏。** 输入提示 `Search components…`，按英文名称、描述及用途关键词过滤；⌘K / Ctrl+K 聚焦同一个输入框，不另做搜索弹窗。
 4. **分类与数量。** `All`、`Text`、`Image`、`Background`；保持单选，与搜索共同生效。初始真实数量为 4，筛选后更新结果数。暂不展示没有条目的 UI 分类。

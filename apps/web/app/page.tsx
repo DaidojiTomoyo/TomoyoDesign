@@ -5,7 +5,7 @@ import { ImageFocus } from "@/components/effects/image-focus";
 import { MetallicText } from "@/components/effects/metallic-text";
 import { ScrollBloom } from "@/components/effects/scroll-bloom";
 import { SpatialTunnel } from "@/components/effects/spatial-tunnel";
-import { GitHubPlaceholder, SiteHeader } from "@/components/home/site-header";
+import { GitHubLink, SiteHeader } from "@/components/home/site-header";
 import { componentsBySlug } from "@/lib/catalog";
 import styles from "./home.module.css";
 
@@ -208,7 +208,7 @@ export default function HomePage() {
             <Link href="/components">Components</Link>
             <a href="#examples">Examples</a>
             <a href="#how-to-use">How to use</a>
-            <GitHubPlaceholder />
+            <GitHubLink />
           </nav>
         </div>
         <a

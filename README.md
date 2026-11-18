@@ -149,8 +149,8 @@ with small WebGL renderers: accelerating cobalt portals, flowing liquid chrome,
 and scroll-driven cherry blossom clusters. They provide static fallbacks and
 respect reduced motion. The local demos suspend rendering while offscreen or in
 a hidden tab; the flower background draws only when its progress, visible page
-slice, size, or resource state changes and stops in a hidden tab. GitHub entries
-are reserved with a “soon” status until the repository exists.
+slice, size, or resource state changes and stops in a hidden tab. The shared
+header and homepage footer link to the [GitHub repository](https://github.com/DaidojiTomoyo/TomoyoDesign).
 
 Tailwind's Turbopack loader is scoped to `globals.css`; CSS Modules use Next.js's
 built-in processing. Keep module files out of the plain-CSS loader rule so their

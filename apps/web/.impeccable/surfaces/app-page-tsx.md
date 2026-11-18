@@ -29,7 +29,7 @@ confirmed requirements below remain the baseline. Retired mockups are not requir
 - Five real homepage effects: Spatial Tunnel, Metallic Text, Hover Gallery,
   Image Focus, and Scroll Bloom. The catalogue retains the original four effects.
   Component links open `/components`; detail pages and documentation are separate
-  follow-up work. GitHub remains a noninteractive coming-soon entry.
+  follow-up work. The shared header and homepage footer link to the GitHub repository.
 
 ## Confirmed effects and controls
 

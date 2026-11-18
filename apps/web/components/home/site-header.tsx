@@ -3,16 +3,18 @@ import type { ReactNode } from "react";
 import { GitHubMark } from "./github-mark";
 import styles from "./site-header.module.css";
 
-export function GitHubPlaceholder() {
+export function GitHubLink() {
   return (
-    <span
+    <a
       className={styles.github}
-      title="The GitHub repository has not been created yet"
-      aria-label="GitHub repository — coming soon"
+      href="https://github.com/DaidojiTomoyo/TomoyoDesign"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="TomoyoDesign repository (opens in a new tab)"
     >
       <GitHubMark />
-      GitHub <small>soon</small>
-    </span>
+      GitHub
+    </a>
   );
 }
 
@@ -44,7 +46,7 @@ export function SiteHeader({
       </nav>
       {search}
       <div className={styles.actions}>
-        <GitHubPlaceholder />
+        <GitHubLink />
         {activePage !== "components" && (
           <Link className={styles.action} href="/components">
             Browse components

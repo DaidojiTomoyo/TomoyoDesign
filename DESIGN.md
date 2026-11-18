@@ -161,7 +161,7 @@ Cobalt identifies actions and reflected material, while near-black type and cool
 - **White** (`white`) is the main display surface and reversed action text.
 - **Cold paper** (`paper`) supports the opening scene.
 - **Near-black ink** (`ink`) carries primary type; **muted ink** (`ink-muted`) carries descriptions and effect instructions.
-- **Navigation gray** (`navigation-muted`) supports header links and the reserved GitHub status.
+- **Navigation gray** (`navigation-muted`) supports header links, including GitHub.
 - **Fine line** (`line`) separates workflow items and the footer baseline.
 - **Example gray** (`example-surface`) frames the white furniture example.
 
@@ -228,7 +228,7 @@ Use Lucide for interface icons. ArrowUpRight accompanies forward actions, ArrowU
 
 The transparent header uses a three-column layout: left wordmark, centered links, right actions. Main links remain visible at every supported desktop width. The first navigation link is near-black, while the others use navigation gray. The footer repeats the navigation beside its introductory line and places the uniformly heavy Archivo Black name below.
 
-GitHub is currently a noninteractive status with a small “soon” label and the official GitHub Invertocat mark, in both header and footer. It reserves the confirmed future entry without presenting an invented destination.
+The shared header and homepage footer pair the official Invertocat mark with a GitHub link that opens the project repository in a new tab.
 
 ### Effect controls
 
