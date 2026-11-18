@@ -5,16 +5,17 @@ import styles from "./site-header.module.css";
 
 export function GitHubLink() {
   return (
-    <a
+    <Link
       className={styles.github}
       href="https://github.com/DaidojiTomoyo/TomoyoDesign"
+      prefetch={false}
       target="_blank"
       rel="noopener noreferrer"
       title="TomoyoDesign repository (opens in a new tab)"
     >
       <GitHubMark />
       GitHub
-    </a>
+    </Link>
   );
 }
 
