@@ -1,0 +1,50 @@
+.root {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.canvas,
+.poster {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.canvas {
+  position: fixed;
+  inset: 0;
+}
+
+.posterFrame {
+  position: absolute;
+  inset: 0;
+}
+
+.poster {
+  position: absolute;
+  inset: 0;
+  object-fit: fill;
+  object-position: left top;
+}
+
+.root[data-state="ready"] .canvas {
+  opacity: 1;
+}
+
+.root[data-state="fallback"][data-poster="ready"] .poster {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .root .canvas {
+    display: none;
+  }
+
+  .root[data-poster="ready"] .poster {
+    opacity: 1;
+  }
+}

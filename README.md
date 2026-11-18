@@ -20,9 +20,9 @@ Open [http://localhost:3000](http://localhost:3000).
 
 The website uses the official `create-next-app@16.4.6` App Router template with
 TypeScript, ESLint, and Tailwind CSS. The English homepage builds on that template
-with four interactive demos: Spatial Tunnel, Metallic Text, Hover Gallery, and
-Image Focus. Current code and [DESIGN.md](DESIGN.md) define the approved visual
-baseline; retired mockups have been removed. It is desktop-only, with a 1200px
+with four component demos: Spatial Tunnel, Metallic Text, Hover Gallery,
+and Image Focus, plus a page-wide Scroll Bloom animation. Current code and [DESIGN.md](DESIGN.md) define the
+approved visual baseline; retired mockups have been removed. It is desktop-only, with a 1200px
 minimum document width and no phone or tablet reflow. See the
 [asset index](design/README.md) for website image sources.
 
@@ -31,13 +31,42 @@ scoped cleanup and reduced-motion handling. The hero plays automatically from a
 fixed viewpoint and has an icon-only pause/play control. Its height adapts to
 desktop windows between 680px and 918px.
 
+Scroll Bloom is a cherry blossom background that grows down from the
+upper-left of the document. Branches and flower clusters belong to the page,
+so developed portions scroll out of view while lower branches appear. Native
+scrolling controls growth and reverses it when scrolling back. The original
+centered content boundary, `min(100% - 112px, 1328px)`, stays unchanged, as do
+the hero and all four demonstrations. There is no flower column, pinned stage,
+separate section, or additional scroll distance.
+
+The current revision replaces rectangle-corner routing with a continuous
+parent bough and unequal, tapered side branches attached at real nodes. Main
+wood and compact clusters stay clear of opaque demo surfaces so white panels
+do not cut apparently disconnected pieces out of the plant. Budding and
+flowering use each cluster's document position and the viewport height, keeping
+the unfolding stage visible during ordinary scrolling. The branches do not
+thread through the workflow columns.
+
+The viewport-sized transparent canvas draws on demand. Reduced motion and
+rendering failure use one of four mature static backgrounds matching the
+desktop composition. Locally served AI-generated petal, leaf, and bark textures
+provide surface detail; they are not photographs. The
+[sakura background plan](design/plans/homepage-sakura-background.md) records the
+current implementation, validation status, and evidence limits separately from
+historical review verdicts. The final revision passes 19 tests, lint/type checks,
+source formatting, and its focused visual review; all four static fallbacks are
+refreshed. Production build verification remains blocked by this environment’s
+internal-port permissions and Google Fonts DNS access, so a successful build
+is not claimed.
+
 The [component catalogue](http://localhost:3000/components) at `/components`
-lists those four effects with English search, category filtering, and shareable
-URL state. Browser navigation restores the query and category. Each card starts
+lists the original four effects with English search, category filtering, and
+shareable URL state. Browser navigation restores the query and category. Each card starts
 with a real static preview; only the hovered or focused card loads its live
 effect, with keyboard focus taking priority. Live previews stop offscreen, in a
 hidden tab, or when reduced motion is enabled. Component detail pages are not yet
 available, so card titles do not link to unfinished routes.
+Scroll Bloom belongs to the homepage composition and is not in the catalogue.
 
 ## Workspace layout
 
@@ -46,12 +75,12 @@ apps/
   web/                     Next.js website (@tomoyodesign/web)
     app/                   App Router pages, layout, and styles
     components/home/       Homepage navigation
-    components/effects/    The four interactive demonstrations
+    components/effects/    Four demos and the page-wide flower animation
     components/catalog/    Catalogue filtering and on-demand previews
     lib/catalog.ts         Shared component metadata and search matching
     public/                Website images and preview fallbacks
       images/showcase/     Chair, vase, and lamp images
-      images/components/   Two renderer covers and two image-preview fallbacks
+      images/components/   Renderer covers, image fallbacks, and flower textures
 design/
   plans/                   Approved page plans
   README.md                Website asset index
@@ -95,6 +124,8 @@ local verification is:
 ```sh
 pnpm check
 pnpm format:check
+node --test apps/web/lib/catalog.test.mjs
+node --test apps/web/components/effects/shaders/scroll-bloom-geometry.test.mjs
 pnpm build
 ```
 
@@ -113,10 +144,12 @@ links back to those sections. Component detail pages, installation documentation
 a source registry, authentication, and a backend remain separate follow-up work.
 Each effect is isolated in
 `apps/web/components/effects/` so it can move into a reusable package once its
-public API is defined. The tunnel and metallic text use GLSL shaders with small
-WebGL renderers: accelerating cobalt portals and flowing liquid chrome. They
-provide static fallbacks, respect reduced
-motion, and suspend rendering while offscreen or in a hidden tab. GitHub entries
+public API is defined. The tunnel, metallic text, and Scroll Bloom use GLSL shaders
+with small WebGL renderers: accelerating cobalt portals, flowing liquid chrome,
+and scroll-driven cherry blossom clusters. They provide static fallbacks and
+respect reduced motion. The local demos suspend rendering while offscreen or in
+a hidden tab; the flower background draws only when its progress, visible page
+slice, size, or resource state changes and stops in a hidden tab. GitHub entries
 are reserved with a “soon” status until the repository exists.
 
 Tailwind's Turbopack loader is scoped to `globals.css`; CSS Modules use Next.js's
@@ -149,6 +182,11 @@ Surface briefs are versioned under Impeccable's project folders; verification
 captures and local tooling state are ignored.
 The [component catalogue plan](design/plans/components-catalog.md) records the
 approved four-item scope, preview behavior, and follow-up detail routes.
+The [sakura background plan](design/plans/homepage-sakura-background.md) records
+the approved upper-left, document-bound composition, reversible growth,
+centered layout, rendering limits, and fallback behavior. The earlier
+[Scroll Bloom plan](design/plans/homepage-scroll-bloom.md) preserves the
+right-side version's implementation and review history.
 
 Local agent installations in `.agents/` and `.codex/` are not committed or required
 to build the website. Official GreenSock skills are installed locally in `.agents/skills/gsap-core/`,

@@ -37,6 +37,7 @@ TomoyoDesign 是网页交互组件库，提供文字动效、图片交互、背�
 - 产品运行于 Web，当前可浏览首页演示与 `/components` 目录；查看使用说明及获取可分发源码属于后续能力。
 - 用户已于 2026-11-17 退役旧设计稿。后续修改以当前代码、`DESIGN.md`、已确认的页面方案与用户要求为基线，不再依赖旧设计稿或外部 pen 源文件。
 - 已确认的组件目录方案记录于 `design/plans/components-catalog.md`；运行素材索引见 `design/README.md`。
+- 用户确认 Scroll Bloom 为整页背景：樱花从页面左上向下生长，绑定页面坐标，已长出的部分随页面滚出视口，正文保持原有居中布局。最新审查指出枝条被白色演示区域截断、避让路径像线路、开花时机偏晚。用户确认保留枝条向下生长，同时重做枝形、遮挡关系和开花时序；当前方向与验收约束见 `design/plans/homepage-sakura-background.md`。
 - 用户明确要求不做手机端布局。当前只实现桌面布局，最小文档宽度为 1200px；窄窗口保留桌面结构，不切换手机导航或堆叠页面。
 - 官网框架、工作区和后续扩展使用用户指定的 Turborepo、pnpm 与 Next.js 组合。
 - 界面图标使用 Lucide，GitHub 品牌图标使用官方 SVG；演示动画使用 GSAP，已安装 GreenSock 官方核心、React 与性能 skills。
@@ -47,8 +48,11 @@ TomoyoDesign 是网页交互组件库，提供文字动效、图片交互、背�
 ### 当前已实现范围
 
 - 首页展示组件效果、页面示例和使用流程，并提供组件、页面示例、使用指南及 GitHub 入口。
-- 当前四个真实效果为 Spatial Tunnel、Metallic Text、Hover Gallery 和 Image Focus。组件目录支持搜索、分类、URL 状态恢复和单卡预览；后续组件清单尚未确定。
-- Spatial Tunnel 与 Metallic Text 已在网站中实现 WebGL / GLSL 效果；现有演示不代表已提供可复制源码或已确认对外分发方式。
+- 首页保留 Spatial Tunnel、Metallic Text、Hover Gallery 和 Image Focus 四项组件演示，另以 Scroll Bloom 承载贯穿首页的樱花动画。组件目录仍收录前四项，支持搜索、分类、URL 状态恢复和单卡预览；Scroll Bloom 的目录收录方式及后续组件清单尚未确定。
+- Scroll Bloom 以页面坐标布置木枝与花簇，原生滚动控制生长与逆向还原；固定视口 canvas 仅绘制当前可见页面切片。正文保持 `min(100% - 112px, 1328px)` 的居中边界，不增加花枝专用栏、独立段落或滚动距离。
+- 当前樱花构图以完整自然枝形为先：连续且逐级变细的主枝从左上向下发展，长短不等的侧枝从真实节点分出，花簇围绕短枝聚集。主枝应保持可追踪的连续性，避免在没有可见边界的白色演示区域被截断；不得用矩形转角寻路决定树形，也不将枝条穿过 workflow 列缝作为构图目标。
+- Spatial Tunnel、Metallic Text 与 Scroll Bloom 使用 WebGL / GLSL；现有演示不代表已提供可复制源码或已确认对外分发方式。樱花按需绘制，新的局部生长时序参考枝节点和花簇在文档及视口中的位置，使伸枝、出苞、开花发生在可见区域。减少动效及渲染失效使用同一成熟构图的静态背景；本轮 19 项测试、lint/typecheck、源码格式与最终回退检查通过，记录中的局部视觉修正复审通过；生产构建因环境端口及字体网络限制未验证。具体实现、当前验证与历史证据分别记录在樱花背景方案中。
+- 樱花使用本地提供的 AI 生成花瓣、叶片及树皮纹理，映射到随滚动变化的几何表面；这些素材不是实拍照片，不代表已达到摄影级写实效果，也不依赖外部运行时图片服务。
 - 组件详情、参数面板、源码查看与复制、接入说明和参数文档尚未实现，需另行规划。未提供真实详情页前，目录卡片保持普通标题与可用预览，不设置无效详情链接。
 
 ### 语言与后续扩展
@@ -74,11 +78,15 @@ TomoyoDesign 是网页交互组件库，提供文字动效、图片交互、背�
 
 ## Evidence on Hand
 
-- `apps/web/app/`、`apps/web/components/` 与 `apps/web/lib/catalog.ts`：当前首页、组件目录、四个效果及目录元数据的实现。
-- `DESIGN.md` 与 `design/plans/components-catalog.md`：当前设计系统和已确认的目录方案。
+- `apps/web/app/`、`apps/web/components/` 与 `apps/web/lib/catalog.ts`：首页四项组件演示、整页樱花动画、四项目录及目录元数据的实现。
+- `DESIGN.md`、`design/plans/components-catalog.md` 与 `design/plans/homepage-sakura-background.md`：当前设计系统、已确认的目录方案与最新首页樱花背景方案。
+- `.impeccable/review/sakura-composition-2026-11-17/`：当前枝形、遮挡与开花时序重构的实现、最终回退、19 项测试及局部视觉修正审查证据；构建限制与验证边界见樱花背景方案。
+- `.impeccable/review/sakura-critique-2026-11-17/`：最新双人独立审查，指出连续性、枝形与时序问题；用户随后确认一起调整。
+- `.impeccable/review/sakura-natural-2026-11-17/`：上一轮自然分枝与花簇加密的实现验证及两项修正审查；属于历史证据，其局部 `ship` 不代表当前视觉问题已解决。
+- `design/plans/homepage-scroll-bloom.md`：旧版实现与审查索引；右侧花枝及上一轮背景的审查均是历史记录，不代替本轮验收。
 - `.impeccable/review/`：历史实现截图与验证报告；记录当时的检查结果，不使已退役的设计稿继续成为开发前提。
 - `apps/web/public/images/showcase/`：提供扶手椅、陶瓷花瓶、台灯三张原始 JPEG 素材，用于首页展示示例。文件名与原始导出名对照见 `design/README.md`。
-- `apps/web/public/images/components/`：目录使用的真实 renderer 封面与图片预览回退素材，索引见 `design/README.md`。
+- `apps/web/public/images/components/`：目录使用的真实 renderer 封面、图片预览回退素材、首页樱花透明回退封面及 AI 生成的花瓣、叶片、树皮纹理；来源与当前产出状态见 `design/README.md`。
 - 当前未配置组件 Registry 分发端点；历史截图中的占位地址不代表可用服务。
 - 首页的 FORM Objects 被标注为家居网站设计示例，不作为真实客户、合作品牌或案例背书。
 - 目前未提供真实使用数据、客户评价、公开仓库或可分发的完整组件源码，不得补造这些内容。
@@ -94,4 +102,5 @@ TomoyoDesign 是网页交互组件库，提供文字动效、图片交互、背�
 ## Accessibility & Inclusion
 
 - Metallic Text 保留可读取的原始文字，并在减少动效时使用固定光照位置。
+- Scroll Bloom 的减少动效与渲染失败状态展示同一页面构图的静态成熟樱花背景，随页面滚动。实时场景与静态回退须保持枝条连接与完整花簇，避开实测文字和不透明演示表面；不使用片元着色器或图片遮罩抹除花枝。场景作为装饰，不占键盘焦点、不拦截点击、不逐帧播报；正文、导航、原生页面滚动和组件控制持续可用，正常与减少动效模式都不增加滚动距离。本轮最终静态回退导出后再次验证真实 WebGL context 丢失与恢复，并通过工具模拟减少动效媒体条件；未切换操作系统偏好。临时验证工具已移除，具体证据边界见当前方案。
 - 后续修改继续保留可读回退与减少动效支持；全产品的无障碍合规目标与具体兼容范围尚未确认。

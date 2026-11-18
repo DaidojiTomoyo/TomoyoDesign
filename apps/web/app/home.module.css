@@ -1,14 +1,25 @@
+.home {
+  position: relative;
+  isolation: isolate;
+}
+
 .opening {
   position: relative;
   height: clamp(680px, 100svh, 918px);
   overflow: clip;
   background: var(--paper);
-  isolation: isolate;
 }
 .heroScene {
   position: absolute;
   inset: 0;
-  z-index: -1;
+}
+
+/* Keep the tunnel pixels below the branch and its playback control above it. */
+.heroScene > [role="group"] {
+  isolation: auto;
+}
+.heroScene button {
+  z-index: 2;
 }
 .heroContent,
 .section,
@@ -140,6 +151,7 @@
   text-decoration: underline;
 }
 .metalStage {
+  background: var(--white);
   min-height: 472px;
 }
 .gallerySection {
@@ -337,4 +349,27 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
+}
+
+/* Section colors stay below the document decoration. Only actual content rises. */
+.heroContent,
+.collectionHeading,
+.metalStage,
+.galleryHeading,
+.galleryMedia,
+.galleryCaption,
+.exampleHeading,
+.exampleFrame,
+.exampleCaption,
+.workflowHeading,
+.steps,
+.closingInner,
+.footerTop,
+.footerWordmark,
+.footerBottom {
+  position: relative;
+  z-index: 2;
+}
+.heroCaption {
+  z-index: 2;
 }
